@@ -13,6 +13,31 @@ t_list  *ft_new_node(void *content)
     return (new);
 }
 
+// It must be declared as follows:
+// 
+// void    ft_list_foreach(t_list *begin_list, void (*f)(void *));
+// 
+// The function pointed to by f will be used as follows:
+// 
+// (*f)(list_ptr->data); 
+
+void    ft_lst_toupper(void *data)
+{
+    char    *str = (char *)data;
+    while (*str)
+    {
+        *str = ft_toupper(*str);
+        str++;
+    }
+}
+
+char    ft_toupper(char c)
+{
+    if (c >= 'a' && c <= 'z')
+        c = c - ('a' - 'A');
+    return (c);
+}
+
 void  ft_add_back(t_list **root, void *content)
 {
     t_list  *new;
