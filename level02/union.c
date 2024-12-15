@@ -10,6 +10,17 @@ char    ft_strchr(char *src, int c)
     return ('\0');
 }
 
+void    ft_putstr(char *str)
+{
+    int iter = 0;
+
+    while (str[iter])
+    {
+        write(1, &str[iter], 1);
+        iter++;
+    }
+}
+
 void    ft_union(char *src1, char *src2)
 {
     char    str[27];
@@ -36,7 +47,7 @@ void    ft_union(char *src1, char *src2)
         iter1++;
     }
     str[iter2]='\0';
-    printf("%s\n", str);
+    ft_putstr(str);
 }
 
 int     main(int argc, char **argv)
