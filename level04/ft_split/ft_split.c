@@ -40,18 +40,24 @@ int     ft_num_words(char *str)
     return (counter);
 }
 
+void    ft_fill_words()
+{
+    
+}
+
 char    **ft_split(char *str)
 {
-    //char **words;
-    //int len = 0;
+    char    **words;
+    int     len;
     int     num_words;
 
+    len = 0;
+    num_words = 0;
     if (!str)
         return (NULL);
-    //len = ft_strlen(str);
-    //words = malloc(sizeof(char *)*len);
+    len = ft_strlen(str);
+    words = malloc(sizeof(char *)*len);
     num_words = ft_num_words(str);
-    printf("number of words: %d\n", num_words);
     return NULL;
 }
 
