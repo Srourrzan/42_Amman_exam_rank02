@@ -10,7 +10,7 @@ int     ft_strlen(char *str)
     iter = 0;
     while(str[iter])
     {
-        if (str[iter] != '-')
+        if ((str[iter] != '-'))
             len++;
         iter++;
     }
