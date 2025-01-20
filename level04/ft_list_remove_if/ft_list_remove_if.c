@@ -38,6 +38,11 @@ void    ft_display_list(t_list **root)
     }
 }
 
+int ft_strcmp(void *data1, void *data2)
+{
+    return strcmp((char *)data1, (char *)data2);
+}
+
 int main(int argc, char **argv)
 {
     t_list  *root;
